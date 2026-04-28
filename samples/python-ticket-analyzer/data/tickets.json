@@ -1,0 +1,56 @@
+[
+  {
+    "id": "T-1001",
+    "title": "CLI output is too generic",
+    "status": "open",
+    "priority": "P1",
+    "owner": "Ava",
+    "created_at": "2026-04-14",
+    "tags": ["copilot-cli", "usability"]
+  },
+  {
+    "id": "T-1002",
+    "title": "Need better onboarding prompts",
+    "status": "open",
+    "priority": "P2",
+    "owner": "Noah",
+    "created_at": "2026-04-18",
+    "tags": ["prompting", "onboarding"]
+  },
+  {
+    "id": "T-1003",
+    "title": "Spec template missing examples",
+    "status": "closed",
+    "priority": "P3",
+    "owner": "Mila",
+    "created_at": "2026-04-10",
+    "tags": ["specs", "docs"]
+  },
+  {
+    "id": "T-1004",
+    "title": "Python instructions need a cleanup",
+    "status": "open",
+    "priority": "P2",
+    "owner": "Ava",
+    "created_at": "2026-04-11",
+    "tags": ["python", "instructions"]
+  },
+  {
+    "id": "T-1005",
+    "title": "Need more Spaces examples",
+    "status": "closed",
+    "priority": "P3",
+    "owner": "Noah",
+    "created_at": "2026-04-06",
+    "tags": ["spaces", "examples"]
+  },
+  {
+    "id": "T-1006",
+    "title": "High-priority bug in workshop checklist",
+    "status": "open",
+    "priority": "P1",
+    "owner": "Ava",
+    "created_at": "2026-04-20",
+    "tags": ["checklist", "workshop"]
+  }
+]

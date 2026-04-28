@@ -1,0 +1,27 @@
+@baseUrl = http://localhost:3001
+
+### Health check
+GET {{baseUrl}}/health
+
+### List all feedback
+GET {{baseUrl}}/feedback
+
+### Filter feedback by topic
+GET {{baseUrl}}/feedback?topic=copilot-chat
+
+### Filter feedback by minimum score
+GET {{baseUrl}}/feedback?minScore=4
+
+### Create feedback
+POST {{baseUrl}}/feedback
+Content-Type: application/json
+
+{
+  "author": "Liam",
+  "topic": "copilot-cli",
+  "score": 5,
+  "comment": "Very useful once I gave it a narrow task and a spec."
+}
+
+### Feedback summary
+GET {{baseUrl}}/feedback/summary
