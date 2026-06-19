@@ -1,6 +1,6 @@
 # GitHub Copilot workshop repository
 
-This repository is a **slide-free, presentation-style workshop** for a **2-hour customer session** on GitHub Copilot. It focuses on **what Copilot is, how to set it up, how to use it as a pair-programming partner on simple examples, and how to introduce advanced features** such as **Spaces, constitution/instructions, agents, skills, MCP, plugins, spec-driven development, Copilot CLI, and a short Azure deployment extension**.
+This repository is a **slide-free, presentation-style workshop** for a **5-6 hour customer session** on GitHub Copilot. It focuses on **what Copilot is, how to set it up, how to use it as a pair-programming partner on simple examples, and how to introduce advanced features** such as **Spaces, constitution/instructions, agents, skills, MCP, plugins, spec-driven development, Copilot CLI, and a short Azure deployment extension**.
 
 The core workshop intentionally **does not cover Git workflows, pull requests, or CI/CD**. Deployment appears only as an explicit optional Azure extension after the app has been built.
 
@@ -12,23 +12,24 @@ The core workshop intentionally **does not cover Git workflows, pull requests, o
 4. **Keep humans in charge.** Use Copilot to accelerate thinking and implementation, then review, test, and refine.
 5. **Move from one-off prompts to repeatable workflows.** Spaces, constitutions, instructions, and specs make team usage more reliable.
 
-## 2-hour flow
+## 5-6 hour flow
 
 | Time | Topic | Repository section |
 | --- | --- | --- |
-| 5 min | Framing, goals, how to use this repo | [00-start-here](./00-start-here/README.md) |
-| 10 min | What GitHub Copilot is and where it shows up | [01-what-is-github-copilot](./01-what-is-github-copilot/README.md) |
-| 10 min | Setup and verification | [02-setup](./02-setup/README.md) |
-| 10 min | First wins in the editor | [03-first-wins](./03-first-wins/README.md) |
-| 15 min | Effective usage patterns | [04-effective-usage](./04-effective-usage/README.md) |
-| 20 min | Hands-on: Node sample | [05-hands-on-node](./05-hands-on-node/README.md) |
-| 10 min | Spaces and reusable context | [06-spaces-and-context](./06-spaces-and-context/README.md) |
-| 10 min | Constitution, instructions, and governance | [07-constitution-and-instructions](./07-constitution-and-instructions/README.md) |
-| 10 min | Agents, skills, MCP, and plugins | [08-agents-skills-mcp-plugins](./08-agents-skills-mcp-plugins/README.md) |
-| 10 min | Spec-driven development and full-stack starter | [09-spec-driven-development](./09-spec-driven-development/README.md) |
-| 5 min | Copilot CLI | [10-copilot-cli](./10-copilot-cli/README.md) |
-| 5 min | Hands-on: Python + CLI | [11-hands-on-python](./11-hands-on-python/README.md) |
-| 15 min optional | Deploy the vibe-coded app to Azure | [12-deploy-to-azure](./12-deploy-to-azure/README.md) |
+| 10 min | Framing, goals, how to use this repo | [00-start-here](./00-start-here/README.md) |
+| 20 min | What GitHub Copilot is and where it shows up | [01-what-is-github-copilot](./01-what-is-github-copilot/README.md) |
+| 20 min | Setup and verification | [02-setup](./02-setup/README.md) |
+| 20 min | First wins in the editor | [03-first-wins](./03-first-wins/README.md) |
+| 25 min | Effective usage patterns | [04-effective-usage](./04-effective-usage/README.md) |
+| 40 min | Hands-on: Node sample | [05-hands-on-node](./05-hands-on-node/README.md) |
+| 15 min | Break and environment catch-up | - |
+| 20 min | Spaces and reusable context | [06-spaces-and-context](./06-spaces-and-context/README.md) |
+| 25 min | Constitution, instructions, and governance | [07-constitution-and-instructions](./07-constitution-and-instructions/README.md) |
+| 25 min | Agents, skills, MCP, and plugins | [08-agents-skills-mcp-plugins](./08-agents-skills-mcp-plugins/README.md) |
+| 35 min | Spec-driven development and full-stack starter | [09-spec-driven-development](./09-spec-driven-development/README.md) |
+| 20 min | Copilot CLI | [10-copilot-cli](./10-copilot-cli/README.md) |
+| 25 min | Hands-on: Python + CLI | [11-hands-on-python](./11-hands-on-python/README.md) |
+| 30-45 min optional | Deploy the vibe-coded app to Azure | [12-deploy-to-azure](./12-deploy-to-azure/README.md) |
 
 ## Repository map
 
