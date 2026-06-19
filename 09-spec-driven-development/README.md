@@ -28,7 +28,7 @@ Simple framing: a spec is a **shared task brief**. It lets Copilot pair with you
 Use one of these specs depending on the demo style:
 
 - [`samples/python-ticket-analyzer/specs/needs-attention/README.md`](../samples/python-ticket-analyzer/specs/needs-attention/README.md)
-- [`samples/hospital-performance-summary/specs/daily-summary/README.md`](../samples/hospital-performance-summary/specs/daily-summary/README.md)
+- [`samples/hospital-performance-summary-v2/specs/daily-summary/README.md`](../samples/hospital-performance-summary-v2/specs/daily-summary/README.md)
 
 The Python sample is best for a compact CLI flow. The hospital performance sample is an optional standalone exercise for building a small backend + frontend app from a spec.
 
@@ -40,7 +40,7 @@ Summarize the required behavior, edge cases, and acceptance criteria before sugg
 ```
 
 ```text
-Open samples/hospital-performance-summary as the workspace root.
+Open samples/hospital-performance-summary-v2 as the workspace root.
 Read AGENTS.md, .github/copilot-instructions.md, .github/instructions, .github/skills, and specs/daily-summary/README.md.
 Summarize the app goal, backend behavior, frontend behavior, edge cases, and acceptance criteria before suggesting code changes.
 ```

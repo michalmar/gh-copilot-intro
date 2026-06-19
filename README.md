@@ -1,8 +1,8 @@
 # GitHub Copilot workshop repository
 
-This repository is a **slide-free, presentation-style workshop** for a **2-hour customer session** on GitHub Copilot. It focuses on **what Copilot is, how to set it up, how to use it as a pair-programming partner on simple examples, and how to introduce advanced features** such as **Spaces, constitution/instructions, agents, skills, MCP, plugins, spec-driven development, and Copilot CLI**.
+This repository is a **slide-free, presentation-style workshop** for a **2-hour customer session** on GitHub Copilot. It focuses on **what Copilot is, how to set it up, how to use it as a pair-programming partner on simple examples, and how to introduce advanced features** such as **Spaces, constitution/instructions, agents, skills, MCP, plugins, spec-driven development, Copilot CLI, and a short Azure deployment extension**.
 
-The workshop intentionally **does not cover Git workflows, pull requests, CI/CD, or deployment**. The goal is practical developer productivity.
+The core workshop intentionally **does not cover Git workflows, pull requests, or CI/CD**. Deployment appears only as an explicit optional Azure extension after the app has been built.
 
 ## Main messages
 
@@ -28,6 +28,7 @@ The workshop intentionally **does not cover Git workflows, pull requests, CI/CD,
 | 10 min | Spec-driven development and full-stack starter | [09-spec-driven-development](./09-spec-driven-development/README.md) |
 | 5 min | Copilot CLI | [10-copilot-cli](./10-copilot-cli/README.md) |
 | 5 min | Hands-on: Python + CLI | [11-hands-on-python](./11-hands-on-python/README.md) |
+| 15 min optional | Deploy the vibe-coded app to Azure | [12-deploy-to-azure](./12-deploy-to-azure/README.md) |
 
 ## Repository map
 
@@ -43,6 +44,7 @@ The workshop intentionally **does not cover Git workflows, pull requests, CI/CD,
 - [09-spec-driven-development](./09-spec-driven-development/README.md)
 - [10-copilot-cli](./10-copilot-cli/README.md)
 - [11-hands-on-python](./11-hands-on-python/README.md)
+- [12-deploy-to-azure](./12-deploy-to-azure/README.md)
 - [facilitator](./facilitator/README.md)
 - [reference](./reference/README.md)
 - [constitution](./constitution/README.md)
@@ -53,7 +55,7 @@ The workshop intentionally **does not cover Git workflows, pull requests, CI/CD,
 
 - [`samples/node-feedback-api`](./samples/node-feedback-api/README.md): editor-first exercise using Node.js, Express, and Vitest
 - [`samples/python-ticket-analyzer`](./samples/python-ticket-analyzer/README.md): `uv`-managed Python CLI sample for spec-driven development and Copilot CLI exercises
-- [`samples/hospital-performance-summary`](./samples/hospital-performance-summary/README.md): standalone spec-driven vibe-coding exercise using local instructions, skills, and fictional demo data
+- [`samples/hospital-performance-summary-v2`](./samples/hospital-performance-summary-v2/specs/daily-summary/README.md): standalone spec-driven vibe-coding exercise using local instructions, skills, and fictional demo data
 
 ## Recommended delivery style
 

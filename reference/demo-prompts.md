@@ -125,7 +125,7 @@ Implement the feature from the spec, but first give me a short plan and point ou
 ```
 
 ```text
-Open samples/hospital-performance-summary as the workspace root.
+Open samples/hospital-performance-summary-v2 as the workspace root.
 Read AGENTS.md, .github/copilot-instructions.md, .github/instructions, .github/skills, and specs/daily-summary/README.md.
 Summarize the app goal, constraints, acceptance criteria, and assumptions before suggesting code changes.
 ```

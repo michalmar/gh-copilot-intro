@@ -23,7 +23,7 @@ Many teams know GitHub Copilot as “the autocomplete tool.” That is too narro
 - Git basics
 - pull requests and code review workflows
 - CI/CD
-- deployment
+- deployment, except for the optional Azure deployment extension
 
 ## How to use the repository
 
@@ -35,10 +35,11 @@ Move through the numbered sections in order. Each section is designed like a min
 4. **try it**
 5. **takeaway**
 
-Use the two samples when you want attendees to do real work instead of just watching:
+Use the local samples when you want attendees to do real work instead of just watching:
 
 - [Node sample](../samples/node-feedback-api/README.md)
 - [Python sample](../samples/python-ticket-analyzer/README.md)
+- [Hospital performance sample](../samples/hospital-performance-summary-v2/specs/daily-summary/README.md)
 
 ## Success by the end
 
