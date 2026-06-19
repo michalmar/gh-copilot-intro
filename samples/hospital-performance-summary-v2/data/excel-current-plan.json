@@ -1,0 +1,56 @@
+{
+  "source": "Excel planning workbook export",
+  "exportedAt": "2026-06-14T18:00:00.000Z",
+  "planVersion": "2026-06-current-plan-v2",
+  "timeline": "weekly plan with daily targets",
+  "plans": [
+    {
+      "hospital": "Central Care",
+      "weekStart": "2026-06-15",
+      "weekEnd": "2026-06-21",
+      "plannedDailyProduction": {
+        "2026-06-15": 150,
+        "2026-06-16": 152,
+        "2026-06-17": 151
+      },
+      "plannedOccupancyPercent": {
+        "2026-06-15": 80,
+        "2026-06-16": 80,
+        "2026-06-17": 81
+      },
+      "planningNote": "Updated after weekend staffing review."
+    },
+    {
+      "hospital": "North Clinic",
+      "weekStart": "2026-06-15",
+      "weekEnd": "2026-06-21",
+      "plannedDailyProduction": {
+        "2026-06-15": 120,
+        "2026-06-16": 118,
+        "2026-06-17": 121
+      },
+      "plannedOccupancyPercent": {
+        "2026-06-15": 82,
+        "2026-06-16": 81,
+        "2026-06-17": 83
+      },
+      "planningNote": "Stable plan from monthly operating review."
+    },
+    {
+      "hospital": "Riverside Hospital",
+      "weekStart": "2026-06-15",
+      "weekEnd": "2026-06-21",
+      "plannedDailyProduction": {
+        "2026-06-15": 180,
+        "2026-06-16": 176,
+        "2026-06-17": 178
+      },
+      "plannedOccupancyPercent": {
+        "2026-06-15": 86,
+        "2026-06-16": 85,
+        "2026-06-17": 86
+      },
+      "planningNote": "Plan includes extra outpatient capacity."
+    }
+  ]
+}

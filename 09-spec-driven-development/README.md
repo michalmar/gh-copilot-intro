@@ -23,17 +23,33 @@ Simple framing: a spec is a **shared task brief**. It lets Copilot pair with you
 6. verify behavior
 7. ask Copilot to review the result against the spec
 
-## Sample in this repository
+## Samples in this repository
 
-Use the Python sample feature spec:
+Use one of these specs depending on the demo style:
 
 - [`samples/python-ticket-analyzer/specs/needs-attention/README.md`](../samples/python-ticket-analyzer/specs/needs-attention/README.md)
+- [`samples/hospital-performance-summary/specs/daily-summary/README.md`](../samples/hospital-performance-summary/specs/daily-summary/README.md)
 
-## Demo prompt
+The Python sample is best for a compact CLI flow. The hospital performance sample is an optional standalone exercise for building a small backend + frontend app from a spec.
+
+## Demo prompts
 
 ```text
 Read the feature spec in samples/python-ticket-analyzer/specs/needs-attention/README.md.
 Summarize the required behavior, edge cases, and acceptance criteria before suggesting code changes.
+```
+
+```text
+Open samples/hospital-performance-summary as the workspace root.
+Read AGENTS.md, .github/copilot-instructions.md, .github/instructions, .github/skills, and specs/daily-summary/README.md.
+Summarize the app goal, backend behavior, frontend behavior, edge cases, and acceptance criteria before suggesting code changes.
+```
+
+For a short live demo, keep the first slice small:
+
+```text
+Use the backend-api-builder skill.
+Choose the smallest useful API slice from the spec, implement it with one focused API test, and do not build the full UI yet.
 ```
 
 ## What to teach here
@@ -49,9 +65,10 @@ Ask Copilot to:
 
 1. summarize the spec
 2. propose a plan
-3. implement the feature
+3. implement one focused slice
 4. add tests
-5. review the implementation against the acceptance criteria
+5. run or inspect the app
+6. review the implementation against the acceptance criteria
 
 ## Takeaway
 

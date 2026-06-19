@@ -25,7 +25,7 @@ The workshop intentionally **does not cover Git workflows, pull requests, CI/CD,
 | 10 min | Spaces and reusable context | [06-spaces-and-context](./06-spaces-and-context/README.md) |
 | 10 min | Constitution, instructions, and governance | [07-constitution-and-instructions](./07-constitution-and-instructions/README.md) |
 | 10 min | Agents, skills, MCP, and plugins | [08-agents-skills-mcp-plugins](./08-agents-skills-mcp-plugins/README.md) |
-| 10 min | Spec-driven development | [09-spec-driven-development](./09-spec-driven-development/README.md) |
+| 10 min | Spec-driven development and full-stack starter | [09-spec-driven-development](./09-spec-driven-development/README.md) |
 | 5 min | Copilot CLI | [10-copilot-cli](./10-copilot-cli/README.md) |
 | 5 min | Hands-on: Python + CLI | [11-hands-on-python](./11-hands-on-python/README.md) |
 
@@ -53,6 +53,7 @@ The workshop intentionally **does not cover Git workflows, pull requests, CI/CD,
 
 - [`samples/node-feedback-api`](./samples/node-feedback-api/README.md): editor-first exercise using Node.js, Express, and Vitest
 - [`samples/python-ticket-analyzer`](./samples/python-ticket-analyzer/README.md): `uv`-managed Python CLI sample for spec-driven development and Copilot CLI exercises
+- [`samples/hospital-performance-summary`](./samples/hospital-performance-summary/README.md): standalone spec-driven vibe-coding exercise using local instructions, skills, and fictional demo data
 
 ## Recommended delivery style
 

@@ -124,6 +124,35 @@ Read the feature spec in samples/python-ticket-analyzer/specs/needs-attention/RE
 Implement the feature from the spec, but first give me a short plan and point out any ambiguities.
 ```
 
+```text
+Open samples/hospital-performance-summary as the workspace root.
+Read AGENTS.md, .github/copilot-instructions.md, .github/instructions, .github/skills, and specs/daily-summary/README.md.
+Summarize the app goal, constraints, acceptance criteria, and assumptions before suggesting code changes.
+```
+
+```text
+Use the backend-api-builder skill.
+Choose the smallest useful API slice from the spec, implement it with one focused API test, and do not build the full UI yet.
+```
+
+```text
+For an extended exercise, use the backend-api-builder and frontend-ui-design skills to build the first runnable backend + frontend slice from the spec.
+Use the stack and data sources defined by the project and spec. Avoid new dependencies unless the benefit is clear.
+```
+
+```text
+Use the spec-reviewer skill. Review the changes against the spec. Look for missing edge cases, unstable sorting, weak tests, accessibility issues, and unnecessary complexity.
+```
+
+```text
+Use the frontend-ui-design skill to review the UI.
+Verify that the frontend uses only original HTML/CSS, no real-world logos, images, fonts, copied code, hotlinked assets, copied slogans, or branded text.
+```
+
+```text
+Verify this implementation against the spec. Tell me which commands to run, which API responses to inspect, and what UI behavior to check in the browser before accepting the change.
+```
+
 ## Copilot CLI
 
 ```text
