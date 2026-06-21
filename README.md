@@ -56,7 +56,8 @@ The core workshop intentionally **does not cover Git workflows, pull requests, o
 
 - [`samples/node-feedback-api`](./samples/node-feedback-api/README.md): editor-first exercise using Node.js, Express, and Vitest
 - [`samples/python-ticket-analyzer`](./samples/python-ticket-analyzer/README.md): `uv`-managed Python CLI sample for spec-driven development and Copilot CLI exercises
-- [`samples/hospital-performance-summary-v2`](./samples/hospital-performance-summary-v2/specs/daily-summary/README.md): standalone spec-driven vibe-coding exercise using local instructions, skills, and fictional demo data
+- [`samples/hospital-performance-summary-v1`](./samples/hospital-performance-summary-v1/): data-only hospital performance exercise for showing what Copilot must invent without a spec
+- [`samples/hospital-performance-summary-v2`](./samples/hospital-performance-summary-v2/README.md): guided hospital performance exercise using a spec, local instructions, skills, and fictional demo data
 
 ## Recommended delivery style
 

@@ -1,9 +1,10 @@
 # Samples
 
-This workshop includes three local samples:
+This workshop includes local samples for different Copilot workflows:
 
 - [node-feedback-api](./node-feedback-api/README.md) for editor-first Copilot usage
 - [python-ticket-analyzer](./python-ticket-analyzer/README.md) for spec-driven development and Copilot CLI
-- [hospital-performance-summary-v2](./hospital-performance-summary-v2/specs/daily-summary/README.md) for a standalone spec-driven vibe-coding exercise with local instructions, skills, and fictional demo data
+- [hospital-performance-summary-v1](./hospital-performance-summary-v1/) for a data-only vibe-coding contrast exercise
+- [hospital-performance-summary-v2](./hospital-performance-summary-v2/README.md) for the guided version with a spec, local instructions, skills, and fictional demo data
 
-Use the Node sample first for quick wins, the Python sample for CLI-oriented spec work, and the hospital performance sample when you want learners to open a standalone folder and build a small app from a spec.
+Use the Node sample first for quick wins, the Python sample for CLI-oriented spec work, and the hospital performance pair when you want learners to compare pure vibe-coding with spec-driven development.

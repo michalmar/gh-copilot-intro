@@ -1,6 +1,6 @@
 # AGENTS.md
 
-This folder is a **standalone vibe-coding exercise** for a GitHub Copilot workshop.
+This folder is a **standalone spec-driven exercise** for a GitHub Copilot workshop.
 
 Learners start from the spec, demo data, instructions, and skills. There is intentionally no backend or frontend implementation yet.
 
@@ -20,18 +20,15 @@ Use this file for general working rules only. Use the spec for product behavior,
 
 ## Working style
 
+- Prefer decisions that can be traced to the spec, instructions, or skills instead of prompt taste.
 - Read the spec before coding.
 - Restate requirements, assumptions, and edge cases before implementation.
 - Implement one small slice at a time.
 - Prefer pure helper functions for parsing, transformation, calculations, sorting, and business rules.
-- Add tests for visible behavior and important rules.
 - Review the result against the spec before accepting it.
 
 ## Suggested workflow
 
 1. Summarize the spec in your own words.
-2. Identify the smallest useful first slice.
-3. Create only the files needed for that slice.
-4. Add or update tests for that slice.
-5. Run the checks defined by the project.
-6. Review the implementation against the spec.
+2. Implement
+3. Review the implementation against the spec and name which acceptance criteria are satisfied.

@@ -15,17 +15,18 @@ The goal is to turn a feature spec into a small, testable local API without addi
 
 1. Read `AGENTS.md`, `.github/copilot-instructions.md`, the backend instructions, and the feature spec.
 2. Summarize the required endpoints, response shapes, edge cases, and assumptions.
-3. Start with the smallest useful API slice from the spec.
-4. Add helper functions for:
+3. Name which decisions are explicitly defined by the spec and which assumptions remain.
+4. Start with the smallest useful API slice from the spec.
+5. Add helper functions for:
    - reading local demo data
    - parsing simple file formats
    - joining related records
    - calculating derived fields
    - applying business rules
    - sorting deterministic output
-5. Keep route handlers short and readable.
-6. Add test coverage for API behavior and pure helper rules.
-7. Review the implementation against the spec before expanding the UI.
+6. Keep route handlers short and readable.
+7. Add test coverage for API behavior and pure helper rules.
+8. Review the implementation against the spec before expanding the UI.
 
 ## Output expectations
 

@@ -19,6 +19,13 @@ Build a small local backend + frontend app:
 npm start
 ```
 
+Use a simple Node.js app with:
+
+- Express for the backend API
+- Vitest for tests
+- plain browser HTML, CSS, and JavaScript for the frontend
+- no frontend framework, bundler, database, authentication, external API, deployment, or CI/CD setup
+
 The app should run at `http://localhost:3002` and read data from:
 
 ```text
@@ -152,7 +159,25 @@ Keep the UI accessible:
 - Summary rows are deterministic and sorted by hospital name.
 - Tests cover the status rules and at least one API response.
 - The frontend can display all rows for `2026-06-16`.
-- The implementation stays beginner-friendly and avoids new dependencies.
+- The implementation stays beginner-friendly and avoids dependencies beyond the agreed simple Node.js stack unless the benefit is obvious and explained.
+
+## Tests and checks
+
+- Create or update focused tests for each implemented slice.
+- Cover status rules with pure helper tests.
+- Cover at least one successful API response for `GET /api/daily-summary`.
+- Cover validation for missing or invalid `date`.
+- Run `npm test` before accepting the implementation.
+- Run or inspect `npm start` before accepting frontend behavior.
+
+## Workshop comparison cues
+
+When comparing this guided exercise with the v1 vibe-coded attempt, ask:
+
+- Which app decisions are now specified instead of invented?
+- Which edge cases are testable because they are written down?
+- Which generated files can be traced to backend, frontend, data, or review guidance?
+- Which acceptance criteria would catch a plausible but incorrect implementation?
 
 ## Suggested workshop prompt
 
@@ -160,4 +185,9 @@ Keep the UI accessible:
 Read this spec, AGENTS.md, .github/copilot-instructions.md, .github/instructions, and .github/skills.
 Summarize the required backend behavior, frontend behavior, edge cases, and acceptance criteria.
 Then propose a short implementation plan before writing code.
+```
+
+```text
+Compare this spec with the app produced from samples/hospital-performance-summary-v1.
+List the biggest differences in API contract, data handling, UI behavior, edge cases, tests, and reviewability.
 ```

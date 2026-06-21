@@ -44,17 +44,19 @@ Use this sequence when you want a reliable pair-programming demo:
 5. Ask Copilot to review the change for bugs, missing edge cases, and inconsistent response shape.
 6. Debrief which parts of the answer came from context, constraints, and tests.
 
-## Optional golden path: spec-first full-stack starter
+## Optional golden path: vibe-coding to spec-driven development
 
-Use this when you want learners to build a small app from a spec. Open `samples/hospital-performance-summary-v2` as the **workspace root** so its local `AGENTS.md`, `.github/instructions`, and `.github/skills` apply directly.
+Use this when you want learners to feel the difference between under-specified prompting and spec-driven development. Keep the repository root open while comparing v1 and v2. Open `samples/hospital-performance-summary-v2` as the focused workspace only when you want its local `AGENTS.md`, `.github/instructions`, and `.github/skills` to apply directly.
 
-1. Open `samples/hospital-performance-summary-v2`.
-2. Ask Copilot to read `AGENTS.md`, `.github/copilot-instructions.md`, `.github/instructions`, `.github/skills`, and `specs/daily-summary/README.md`.
-3. Ask Copilot to summarize requirements, assumptions, and acceptance criteria before editing.
-4. For a short live demo, use the `backend-api-builder` skill and ask for the smallest useful API slice plus one test.
-5. Implement with tests and run `npm test`.
-6. Inspect the new API behavior and use the `spec-reviewer` skill to review that slice against the relevant part of the spec.
-7. For an extended exercise, continue into the remaining API and frontend behavior with the frontend UI skill.
+1. Focus on `samples/hospital-performance-summary-v1` and ask Copilot for a small local app from the data only, with minimal safety guardrails.
+2. Debrief which decisions Copilot invented: stack, endpoints, calculations, UI, edge cases, and tests.
+3. Give attendees the short goal brief from [09-spec-driven-development](../09-spec-driven-development/README.md) and ask Copilot to draft a feature spec before coding.
+4. Ask Copilot to verify the draft spec against the data and identify one expected row or first API test.
+5. Open `samples/hospital-performance-summary-v2` and ask Copilot to read `AGENTS.md`, `.github/copilot-instructions.md`, `.github/instructions`, `.github/skills`, and `specs/daily-summary/README.md`.
+6. Ask Copilot to summarize how the v2 spec pack removes ambiguity compared with v1.
+7. For a short live demo, use the `backend-api-builder` skill and ask for the smallest useful API slice plus one test.
+8. Inspect the new API behavior and use the `spec-reviewer` skill to review that slice against the relevant part of the spec.
+9. For an extended exercise, continue into the remaining API and frontend behavior with the frontend UI skill.
 
 ## What to emphasize
 

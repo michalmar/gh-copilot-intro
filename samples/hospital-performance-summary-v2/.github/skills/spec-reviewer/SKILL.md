@@ -20,7 +20,8 @@ The goal is to check correctness, teaching value, and demo safety before accepti
 5. Are the edge cases from the spec handled?
 6. Are tests focused on public behavior and important rules?
 7. Is the frontend accessible and understandable without relying on color alone?
-8. Did the implementation avoid databases, external APIs, auth, unnecessary build tools, deployment, and real confidential data?
+8. Can important implementation choices be traced to the spec, instructions, or skills instead of unexplained invention?
+9. Did the implementation avoid databases, external APIs, auth, unnecessary build tools, deployment, and real confidential data?
 
 ## Output style
 
@@ -30,4 +31,8 @@ Report only high-value issues. Prefer the smallest useful fix over broad refacto
 
 ```text
 Use the spec-reviewer skill. Review the recent changes against the local feature spec and report only issues that affect correctness, demo safety, or teaching clarity.
+```
+
+```text
+Use the spec-reviewer skill. Compare the current implementation with the v1 vibe-coded attempt and identify where the spec pack prevented ambiguity or caught a missing behavior.
 ```
