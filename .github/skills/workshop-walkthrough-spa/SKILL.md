@@ -97,6 +97,7 @@ Facilitator mode should include key README content that is useful to show to the
 5. If changing asset URLs, add a cache-busting query string so browser cache does not mix old CSS with new HTML.
 6. Keep Markdown rendering local:
    - fetch README files by relative path from the local static server
+   - bypass stale browser and SPA memory caches when README files change
    - escape HTML before rendering
    - support common workshop Markdown: headings, paragraphs, lists, fenced code, inline code, emphasis, links, and pipe tables
 7. Preserve accessibility basics:

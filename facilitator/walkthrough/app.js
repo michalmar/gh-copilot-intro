@@ -130,18 +130,18 @@ const lessons = [
   {
     id: "08",
     slug: "08-agents-skills-mcp-plugins",
-    title: "Agents, skills, MCP, plugins",
+    title: "Agents, skills, MCP, and plugins",
     time: "25 min",
     phase: "Extension points",
-    summary: "Explain how specialized roles, reusable capabilities, connected tools, and packaged extensions expand Copilot deliberately.",
+    summary: "Classify Copilot extension points after durable context is in place: agents for repeated roles, skills for packaged procedures, MCP for live tools, and plugins for environment extensions.",
     mainMessage: "After Copilot has the right context, you can extend how it works through specialized roles, reusable capabilities, and connected tools.",
-    learnerCue: "Classify needs before choosing an extension point: rule, role, repeatable procedure, live tool, or packaged integration.",
-    demo: "In Copilot CLI, show /agent, /skills, /mcp, and /plugin as visible extension concepts.",
-    tryIt: "For each need, choose instructions, custom agent, skill, MCP, or plugin: tests for every behavior change, reusable Azure deployment procedure, live issue lookup, specialized security review, or new tool bundle.",
-    takeaway: "Agents, skills, MCP, and plugins move Copilot from a single assistant to an extensible development environment. Use them deliberately.",
-    tags: ["agents", "skills", "mcp", "plugins"],
+    learnerCue: "Start by deciding whether the need is default guidance, a specialist role, a repeatable method, live tool access, or an installable capability.",
+    demo: "Show /agent, /skills, /mcp, and /plugin as visible categories, then inspect the workshop-reviewer agent and workshop-section-designer skill definitions in this repository.",
+    tryIt: "For each item, choose instructions, custom agent, skill, MCP, or plugin: always add tests, review workshop edits for teaching clarity, generate a standard workshop section, query live GitHub issues, or add an approved enterprise tool integration. Explain your choices briefly.",
+    takeaway: "Agents, skills, MCP, and plugins move Copilot from a single assistant to an extensible development environment. Use them deliberately: context first, specialization second, tool access third.",
+    tags: ["agents", "skills", "mcp", "plugins", "extension points"],
     source: "../../08-agents-skills-mcp-plugins/README.md",
-    bridge: "Specialization works best when Copilot has a clear spec for what done means."
+    bridge: "After choosing the right extension point, use specs to make the next implementation task explicit and reviewable."
   },
   {
     id: "09",
@@ -268,8 +268,10 @@ const presentationPointsByLesson = {
     "The goal is more consistent, teachable, team-scale Copilot usage."
   ],
   "08": [
-    "Extension points should come after context and instructions.",
-    "Use agents for repeated roles, skills for repeatable procedures, MCP for live tools, and plugins for packaged integrations.",
+    "Start with durable context first: AGENTS.md, repository instructions, path-specific instructions, specs, and Spaces.",
+    "Use agents for repeated roles, skills for packaged procedures, MCP for live systems and governed tools, and plugins for environment extensions.",
+    "This repository includes inspectable examples: .github/agents/workshop-reviewer.agent.md and .github/skills/workshop-section-designer/SKILL.md.",
+    "The exercise is classification: decide when a team need belongs in instructions, a custom agent, a skill, MCP, or a plugin.",
     "Keep beginner demos conceptual unless the audience is ready for deeper setup."
   ],
   "09": [
@@ -352,6 +354,7 @@ const welcomeContextSections = [
 
 const STORAGE_KEY = "copilot-workshop-walkthrough-progress";
 const MODE_KEY = "copilot-workshop-walkthrough-mode";
+const README_VERSION = "20260622-lesson-08-readme-refresh";
 const CONFETTI_COLORS = ["#2f81f7", "#3fb950", "#d29922", "#f85149", "#ff8aa1", "#a371f7"];
 const CONFETTI_COUNT = 72;
 
@@ -936,19 +939,27 @@ async function renderReadme(lesson) {
 }
 
 async function getReadmeMarkdown(source) {
-  if (readmeCache.has(source)) {
-    return readmeCache.get(source);
+  const requestUrl = withReadmeCacheBust(source);
+
+  if (readmeCache.has(requestUrl)) {
+    return readmeCache.get(requestUrl);
   }
 
-  const response = await fetch(source);
+  const response = await fetch(requestUrl, { cache: "no-store" });
 
   if (!response.ok) {
     throw new Error(`README request failed with ${response.status}`);
   }
 
   const markdown = await response.text();
-  readmeCache.set(source, markdown);
+  readmeCache.set(requestUrl, markdown);
   return markdown;
+}
+
+function withReadmeCacheBust(source) {
+  const separator = source.includes("?") ? "&" : "?";
+
+  return `${source}${separator}readmeVersion=${encodeURIComponent(README_VERSION)}`;
 }
 
 function markdownToHtml(markdown, sourcePath) {

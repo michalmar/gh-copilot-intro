@@ -128,7 +128,7 @@ Use the workshop-section-designer skill concept to improve this section's Try it
 
 ## Try it
 
-Ask attendees to classify each need:
+First, ask attendees to classify each need:
 
 ```text
 For each item, choose instructions, custom agent, skill, MCP, or plugin:
@@ -138,6 +138,44 @@ For each item, choose instructions, custom agent, skill, MCP, or plugin:
 4. Query live GitHub issues.
 5. Add an approved enterprise tool integration.
 Explain your choices briefly.
+```
+
+Then ask them to design one custom skill and one custom agent for their own team:
+
+```text
+I want to create one custom skill and one custom agent for my team.
+
+Context:
+- Team or project:
+- Repeated procedure we often do:
+- Specialist role we often need:
+- Tools or files Copilot should use:
+- Things Copilot must avoid:
+
+Suggest:
+1. A skill name, description, purpose, procedure, and quality checklist.
+2. An agent name, description, role instructions, review standards, and output format.
+3. One short task I could run to test each definition.
+
+Keep both ideas practical, lightweight, and useful for everyday development.
+```
+
+If attendees need inspiration, offer one of these ideas:
+
+| Idea | Type | Why it is clever |
+| --- | --- | --- |
+| **Bug Safari Guide** | Skill | Turns a vague bug report into a repeatable investigation path: reproduce, inspect logs, isolate likely files, propose the smallest fix, verify. |
+| **README Reality Check** | Skill | Compares setup docs with the actual project files and produces beginner-safe fixes instead of polished but untested documentation. |
+| **Prompt Referee** | Agent | Reviews prompts before they are sent to Copilot and flags missing intent, context, constraints, or verification steps. |
+| **Demo Safety Inspector** | Agent | Checks workshop or demo changes for fragile commands, hidden setup, too much complexity, and unclear attendee instructions. |
+| **Test Gap Detective** | Agent | Reads a small code change and reports the highest-risk missing test cases without rewriting the implementation. |
+
+For a short live exercise, have each pair choose one row and adapt it:
+
+```text
+Turn the "[chosen idea]" into a custom skill or agent definition for our current project.
+Use a concise name, clear trigger description, practical instructions, and a predictable output format.
+Avoid enterprise complexity and keep it useful for a developer working locally.
 ```
 
 ## What to emphasize
