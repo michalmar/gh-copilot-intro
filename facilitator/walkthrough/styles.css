@@ -13,6 +13,7 @@
   --accent: #2f81f7;
   --accent-muted: #1f6feb;
   --accent-soft: rgba(47, 129, 247, 0.14);
+  --context-accent: #ff8aa1;
   --done: #3fb950;
   --warning: #d29922;
   --danger: #f85149;
@@ -460,11 +461,11 @@ input:focus-visible {
 }
 
 .welcome-hero h1 {
-  max-width: 14ch;
+  max-width: 17ch;
   margin: 0;
-  font-size: clamp(2.35rem, 5.2vw, 4.9rem);
-  line-height: 0.96;
-  letter-spacing: -0.055em;
+  font-size: clamp(2rem, 3.8vw, 3.9rem);
+  line-height: 1;
+  letter-spacing: -0.045em;
 }
 
 .welcome-hero p {
@@ -517,10 +518,122 @@ input:focus-visible {
   font-weight: 650;
 }
 
+.welcome-context-section {
+  grid-column: 1 / -1;
+  background: var(--canvas);
+  border: 1px solid var(--border-muted);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.welcome-context-section + .welcome-context-section {
+  margin-top: 0.2rem;
+}
+
+.welcome-context-summary {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(0.95rem, 2vw, 1.25rem) clamp(1rem, 3vw, 1.6rem);
+  cursor: pointer;
+  list-style: none;
+}
+
+.welcome-context-summary::-webkit-details-marker {
+  display: none;
+}
+
+.welcome-context-summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.welcome-context-header {
+  display: grid;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.welcome-context-title {
+  color: var(--text);
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.welcome-context-subtitle {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.context-toggle {
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 0.35rem;
+  align-items: center;
+  padding: 0.36rem 0.55rem;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--panel);
+  border: 1px solid var(--border-muted);
+  border-radius: 999px;
+}
+
+.context-toggle svg {
+  transition: transform 160ms ease;
+}
+
+.welcome-context-section[open] .context-toggle svg {
+  transform: rotate(180deg);
+}
+
+.welcome-context-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 3vw, 2rem);
+  padding: 0 clamp(1rem, 3vw, 1.6rem) clamp(1rem, 3vw, 1.6rem);
+}
+
+.welcome-context-card {
+  min-height: clamp(11rem, 18vw, 17rem);
+  padding: 0.55rem 0 0.55rem 1.1rem;
+  border-left: 3px solid var(--context-accent);
+}
+
+.context-number {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+}
+
+.welcome-context-card h3 {
+  margin: 0;
+  font-size: clamp(1.55rem, 2.9vw, 3rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.welcome-context-card p {
+  margin: 0.65rem 0 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.4vw, 1.35rem);
+  line-height: 1.45;
+}
+
 .lesson-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: 1.2rem;
+  align-items: start;
   padding-bottom: 1.25rem;
   margin-bottom: 1rem;
   border-bottom: 1px solid var(--border-muted);
@@ -554,10 +667,10 @@ input:focus-visible {
 }
 
 .lesson-title {
-  max-width: 14ch;
-  font-size: clamp(2.6rem, 6.4vw, 6.4rem);
-  line-height: 0.9;
-  letter-spacing: -0.065em;
+  max-width: 18ch;
+  font-size: clamp(2rem, 4.2vw, 4.4rem);
+  line-height: 0.96;
+  letter-spacing: -0.05em;
 }
 
 .lesson-summary {
@@ -590,11 +703,19 @@ input:focus-visible {
 }
 
 .card p,
+.card li,
 .bridge-card p {
   margin: 0;
   color: var(--text);
   font-size: 1rem;
   line-height: 1.62;
+}
+
+.card ul {
+  display: grid;
+  gap: 0.62rem;
+  padding-left: 1.1rem;
+  margin: 0;
 }
 
 .card.feature {
@@ -716,17 +837,30 @@ input:focus-visible {
   min-height: 2.15rem;
   padding: 0 0.75rem;
   color: var(--accent);
+  font-family: inherit;
   font-size: 0.84rem;
   font-weight: 600;
   text-decoration: none;
   background: var(--canvas);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
+  appearance: none;
+  cursor: pointer;
 }
 
 .source-link:hover {
   color: var(--text);
   background: var(--panel-hover);
+}
+
+.lesson-source-link {
+  margin-top: 0.2rem;
+}
+
+.source-path {
+  color: var(--subtle);
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.78rem;
 }
 
 .markdown-body {
@@ -933,14 +1067,32 @@ body.spotlight-mode .app-shell {
   }
 
   .lesson-list,
-  .card-grid {
+  .card-grid,
+  .welcome-context-grid {
     grid-template-columns: 1fr;
   }
 
   .lesson-title,
   .welcome-hero h1 {
     max-width: none;
-    font-size: clamp(2.25rem, 13vw, 4.6rem);
+    font-size: clamp(2rem, 10vw, 3.35rem);
+  }
+
+  .welcome-context-summary {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .context-toggle {
+    justify-content: center;
+  }
+
+  .welcome-context-card {
+    min-height: 8.5rem;
+  }
+
+  .lesson-hero {
+    grid-template-columns: 1fr;
   }
 
   .bridge-row {

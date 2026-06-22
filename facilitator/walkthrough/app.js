@@ -7,7 +7,6 @@ const lessons = [
     phase: "Framing",
     summary: "Set the room up for a practical, slide-free workshop: goals, audience, scope, repository map, and how to move through the sections.",
     mainMessage: "This is a guided Copilot practice path, not reading material. Demo one thing, let people repeat it, then debrief what made it work.",
-    facilitatorCue: "Anchor the session around human steering: intent, context, constraints, review, and judgment stay visible.",
     learnerCue: "Do not try to read the whole repo first. Follow the numbered path and use each README when you need more detail.",
     demo: "Open the root README, show the 5-6 hour flow, then point to the samples and facilitator guide.",
     tryIt: "Open README.md and 00-start-here/README.md. Identify one Copilot habit you want to improve during the workshop.",
@@ -24,7 +23,6 @@ const lessons = [
     phase: "Foundation",
     summary: "Expand the mental model from autocomplete to a set of AI-assisted development experiences across editor, chat, agents, Spaces, and CLI.",
     mainMessage: "GitHub Copilot is a set of AI-assisted development experiences, not just inline code completion.",
-    facilitatorCue: "Show the surfaces quickly, then return to the core idea: Copilot helps when the developer gives direction and reviews output.",
     learnerCue: "Try asking Copilot to explain, improve, and test the same small project so you can feel the different modes.",
     demo: "Open a sample project and ask Copilot to explain the main files, current behavior, and a safe first change.",
     tryIt: "Explain this project like I just joined the team. Focus on the main files, the current behavior, and where a safe first change would go.",
@@ -41,7 +39,6 @@ const lessons = [
     phase: "Foundation",
     summary: "Remove environment friction so the rest of the workshop feels practical instead of magical or fragile.",
     mainMessage: "Good setup removes friction. If setup is solid, Copilot feels practical.",
-    facilitatorCue: "Keep setup checks visible and boring. This prevents the hands-on sections from becoming support time.",
     learnerCue: "Verify editor chat, inline suggestions, and local runtimes before starting the coding exercises.",
     demo: "Have the room verify setup with the same tiny prompt against a known file.",
     tryIt: "Explain the purpose of this file in 5 bullet points and tell me one safe improvement.",
@@ -58,7 +55,6 @@ const lessons = [
     phase: "Practice",
     summary: "Build confidence with small, obvious, reviewable interactions before asking Copilot for larger changes.",
     mainMessage: "Start with low-risk, high-feedback tasks. That is the fastest way to build trust.",
-    facilitatorCue: "Use the Node sample and keep each ask small enough that attendees can inspect the answer.",
     learnerCue: "Pick one tiny task: explain a route, add a test, or propose a small refactor.",
     demo: "Use the Node sample to ask for a project explanation, a focused test, and a review of one tiny change.",
     tryIt: "Choose one: ask for a test, ask for a route explanation, or ask for a tiny refactor in samples/node-feedback-api.",
@@ -75,7 +71,6 @@ const lessons = [
     phase: "Practice",
     summary: "Show how context, constraints, success criteria, and review instructions improve Copilot output more than clever wording alone.",
     mainMessage: "Copilot quality is mostly a context and steering problem.",
-    facilitatorCue: "Contrast a vague prompt with a constrained prompt so the quality jump is obvious.",
     learnerCue: "Include intent, boundaries, success criteria, and a review request in one prompt.",
     demo: "Compare 'Make this API better' with a prompt that names the file, desired behavior, constraints, tests, and review criteria.",
     tryIt: "In samples/node-feedback-api, add GET /feedback/:id. Keep the current Express style, add success and 404 tests, avoid new dependencies, and review the response shape.",
@@ -92,7 +87,6 @@ const lessons = [
     phase: "Hands-on",
     summary: "Practice editor-first Copilot workflows on a lightweight Express API with Vitest tests.",
     mainMessage: "Use this sample to practice editor-first Copilot workflows on a small API.",
-    facilitatorCue: "Make the loop visible: explain, plan, implement one endpoint, run tests, ask for review, refine.",
     learnerCue: "Stay inside the sample and keep the feature narrow. The point is the workflow, not a large API.",
     demo: "Ask Copilot to explain the API and tests, plan GET /feedback/:id, implement it with tests, then review the change.",
     tryIt: "Explain samples/node-feedback-api and its tests. Then propose the smallest plan for GET /feedback/:id with success and not-found behavior before changing code.",
@@ -109,7 +103,6 @@ const lessons = [
     phase: "Reusable context",
     summary: "Introduce Spaces as shared context for recurring workstreams, customer briefs, personas, constraints, and repository context.",
     mainMessage: "Spaces let you bring together reusable context for repeated conversations.",
-    facilitatorCue: "Position Spaces as prepared context, not just a longer prompt.",
     learnerCue: "Notice which facts you would otherwise paste into every chat and move those into reusable context.",
     demo: "Create a Space with this repository plus the customer brief and user personas from spaces/context.",
     tryIt: "Ask Copilot in the Space to turn the customer context into a small backlog, assumptions list, and first-draft adoption plan.",
@@ -126,7 +119,6 @@ const lessons = [
     phase: "Reusable context",
     summary: "Show how constitutions, repository instructions, and path-specific guidance make Copilot more consistent across a team.",
     mainMessage: "If you want Copilot to work well for a team, give it stable guidance, not just clever prompts.",
-    facilitatorCue: "Inspect the rules before asking for implementation. This models how a prepared teammate starts work.",
     learnerCue: "Ask Copilot which repository instructions apply before requesting a change.",
     demo: "Ask Copilot to inspect AGENTS.md and .github/instructions, then explain how they should shape future edits.",
     tryIt: "Look at AGENTS.md and the files in .github/instructions. Explain how they should shape future edits in this repository.",
@@ -143,7 +135,6 @@ const lessons = [
     phase: "Extension points",
     summary: "Explain how specialized roles, reusable capabilities, connected tools, and packaged extensions expand Copilot deliberately.",
     mainMessage: "After Copilot has the right context, you can extend how it works through specialized roles, reusable capabilities, and connected tools.",
-    facilitatorCue: "Keep the demo conceptual unless the audience is ready. Start with instructions and specs before adding extension points.",
     learnerCue: "Classify needs before choosing an extension point: rule, role, repeatable procedure, live tool, or packaged integration.",
     demo: "In Copilot CLI, show /agent, /skills, /mcp, and /plugin as visible extension concepts.",
     tryIt: "For each need, choose instructions, custom agent, skill, MCP, or plugin: tests for every behavior change, reusable Azure deployment procedure, live issue lookup, specialized security review, or new tool bundle.",
@@ -160,7 +151,6 @@ const lessons = [
     phase: "Specification",
     summary: "Demonstrate how specs reduce guessing, make output reviewable, and turn Copilot into a more reliable implementation assistant.",
     mainMessage: "Specs are one of the best ways to turn Copilot from a text generator into a reliable implementation assistant.",
-    facilitatorCue: "Let attendees feel the contrast between data-only vibe-coding and a guided spec pack.",
     learnerCue: "Ask for assumptions before accepting code. Then turn the goal into a spec and verify against data.",
     demo: "Compare the hospital performance v1 data-only folder with the v2 guided spec pack.",
     tryIt: "Build a first attempt from the v1 data-only folder, list the assumptions Copilot had to invent, then draft a spec from the short goal brief.",
@@ -177,7 +167,6 @@ const lessons = [
     phase: "Terminal workflow",
     summary: "Introduce Copilot CLI as an agentic workbench for terminal-native inspection, planning, edits, sessions, and review.",
     mainMessage: "Copilot CLI brings the same pair-programming mindset into the terminal, where developers already inspect, test, and iterate.",
-    facilitatorCue: "Emphasize explicit context, explicit modes, explicit permissions, durable sessions, and built-in review.",
     learnerCue: "Use file references and plan-first prompts so terminal work stays inspectable.",
     demo: "Ask the CLI to explain the Python sample CLI file and identify where a new command should go.",
     tryIt: "Explain @samples/python-ticket-analyzer/src/ticket_analyzer/cli.py and tell me which file I should change to add a new command.",
@@ -194,7 +183,6 @@ const lessons = [
     phase: "Hands-on",
     summary: "Connect specs, instructions, and Copilot CLI in a lightweight Python Typer sample managed with uv.",
     mainMessage: "Use this sample to connect specs, instructions, and Copilot CLI in one small exercise.",
-    facilitatorCue: "Keep it advanced but practical: inspect first, use the spec, implement with tests, then review.",
     learnerCue: "Let the CLI explain the current command before asking for a new one.",
     demo: "Run the Python sample, ask Copilot CLI to explain it, then implement one spec-backed command with tests.",
     tryIt: "In samples/python-ticket-analyzer, explain the current CLI, read the spec, then plan one new command and its tests before editing.",
@@ -211,7 +199,6 @@ const lessons = [
     phase: "Optional extension",
     summary: "Use Copilot as a deployment partner for the guided hospital app: discuss architecture, review commands, execute, and verify.",
     mainMessage: "Use GitHub Copilot as the deployment partner: first to discuss and plan the Azure architecture, then to execute with reviewed Azure CLI commands.",
-    facilitatorCue: "Keep this optional and human-approved. The teaching point is reviewed execution, not cloud trivia.",
     learnerCue: "Ask for the plan before running commands, then verify the deployed app and logs.",
     demo: "Ask Copilot for the architecture plan, discuss Container Apps, deploy with the skill, review commands, and open the deployed UI.",
     tryIt: "Inspect the app and summarize its hosting needs, recommend a small Azure Container Apps architecture, and explain the Azure CLI deployment plan before executing it.",
@@ -228,7 +215,6 @@ const lessons = [
     phase: "Optional extension",
     summary: "Teach context budgeting as an engineering skill: enough focused context to solve the task correctly, with as little noise as possible.",
     mainMessage: "Token optimization is about giving Copilot enough focused context to solve the task correctly, with as little noise as possible.",
-    facilitatorCue: "Frame tokens as attention. Good scoping, concise constraints, and fewer retries matter more than terse wording alone.",
     learnerCue: "Rewrite broad prompts into scoped prompts with clear files, goals, constraints, and expected output.",
     demo: "Use Copilot CLI or VS Code Chat to compare context-heavy and focused prompts, then show a compact prompt makeover.",
     tryIt: "Rewrite this broad prompt: 'Look at the project and improve the API.' Include the specific file, desired behavior, constraints, tests, and output limits.",
@@ -236,6 +222,131 @@ const lessons = [
     tags: ["tokens", "context", "efficiency"],
     source: "../../13-token-optimization/README.md",
     bridge: "End by connecting efficiency back to the whole workshop loop: focused context, fast verification, human judgment."
+  }
+];
+
+const presentationPointsByLesson = {
+  "00": [
+    "Covers: what Copilot is, setup, simple coding tasks, context and instructions, focused context, and advanced workflow features.",
+    "Intentionally skips: Git basics, pull requests, CI/CD, and deployment except for the optional Azure extension.",
+    "Use the repository as a sequence of mini slide decks: main message, short explanation, demo, try-it prompt, and takeaway.",
+    "Success means attendees leave with a Copilot mental model, a pair-programming loop, and a path for shared context and specs."
+  ],
+  "01": [
+    "Copilot is a set of AI-assisted development experiences, not only inline completion.",
+    "Show multiple surfaces: editor chat, suggestions, edit workflows, agents, Spaces, and CLI.",
+    "Keep the human responsible for intent, review, and final judgment."
+  ],
+  "02": [
+    "The workshop depends on verified editor access and local runtimes before hands-on work starts.",
+    "A shared tiny prompt lets the room confirm Copilot Chat is working.",
+    "Setup should feel practical and repeatable, not magical."
+  ],
+  "03": [
+    "Trust starts with small, reviewable Copilot tasks.",
+    "Good first wins include explaining code, writing a focused test, and proposing a tiny refactor.",
+    "The Node sample gives a safe place to demonstrate quick feedback."
+  ],
+  "04": [
+    "Better Copilot output usually comes from better context and steering.",
+    "Use prompts with intent, files, constraints, success criteria, and review instructions.",
+    "Show the contrast between vague and constrained prompts."
+  ],
+  "05": [
+    "This is the main editor-first hands-on API exercise.",
+    "The golden path is explain, plan, implement one endpoint with tests, verify, review, and refine.",
+    "Keep the feature small so the workflow remains visible."
+  ],
+  "06": [
+    "Spaces package reusable context for recurring conversations.",
+    "They are useful before implementation: discovery, scoping, prioritization, and documentation.",
+    "The point is shared context, not a longer one-off prompt."
+  ],
+  "07": [
+    "Instructions and constitutions give Copilot durable team defaults.",
+    "Show repository and path-specific rules before asking for code changes.",
+    "The goal is more consistent, teachable, team-scale Copilot usage."
+  ],
+  "08": [
+    "Extension points should come after context and instructions.",
+    "Use agents for repeated roles, skills for repeatable procedures, MCP for live tools, and plugins for packaged integrations.",
+    "Keep beginner demos conceptual unless the audience is ready for deeper setup."
+  ],
+  "09": [
+    "Specs reduce guessing and make Copilot output easier to review.",
+    "Compare data-only vibe coding with a guided spec pack.",
+    "Ask Copilot to identify assumptions before accepting generated code."
+  ],
+  "10": [
+    "Copilot CLI brings pair-programming into the terminal.",
+    "Emphasize explicit context, modes, permissions, sessions, and review.",
+    "Use file references and plan-first prompts for inspectable terminal work."
+  ],
+  "11": [
+    "The Python sample combines specs, instructions, and CLI in one practical exercise.",
+    "Use uv, Typer, and pytest in a lightweight local workflow.",
+    "Ask for understanding and a plan before implementation."
+  ],
+  "12": [
+    "Deployment is optional and should remain human-approved.",
+    "Use Copilot to discuss architecture, review commands, execute agreed steps, and verify the app.",
+    "Do not turn the core workshop into a cloud deployment class."
+  ],
+  "13": [
+    "Token optimization is focused context, not vague prompt shortening.",
+    "Clear scope and constraints often save more time than terse wording.",
+    "Treat tokens as an investment in correctness and reviewability."
+  ]
+};
+
+const welcomeContextSections = [
+  {
+    title: "Agents change the unit of work",
+    subtitle: "From prompts to intent. From assistants to teams.",
+    cards: [
+      {
+        number: "01",
+        title: "Assistant -> agent",
+        text: "Bigger tasks between interventions."
+      },
+      {
+        number: "02",
+        title: "Sync -> async",
+        text: "Parallel work, even overnight."
+      },
+      {
+        number: "03",
+        title: "Spec -> intent",
+        text: "Manage the foreman, not each step."
+      },
+      {
+        number: "04",
+        title: "1:n -> m:n",
+        text: "Mixed teams of people and agents."
+      }
+    ]
+  },
+  {
+    title: "The new AI economy",
+    subtitle: "Consumption billing turns tokens into capital.",
+    cards: [
+      {
+        title: "AI does not sleep",
+        text: "Capacity is no longer tied to work hours."
+      },
+      {
+        title: "Cost / value",
+        text: "Use the right model strength."
+      },
+      {
+        title: "People + tokens",
+        text: "The optimum combines both."
+      },
+      {
+        title: "Value is not the model",
+        text: "Own the harness, context and tuning."
+      }
+    ]
   }
 ];
 
@@ -256,6 +367,7 @@ const readmeCache = new Map();
 let completedLessons = readCompletedLessons();
 let currentMode = readMode();
 let currentLessonId = getInitialLessonId();
+let openReadmeLessonId = "";
 
 setMode(currentMode);
 renderNavigation();
@@ -421,15 +533,48 @@ function renderLesson() {
   const previousLesson = lessons[index - 1];
   const nextLesson = lessons[index + 1];
   const complete = completedLessons.has(lesson.id);
-  const modeTitle = currentMode === "facilitator" ? "Facilitator cue" : "Learner cue";
-  const modeText = currentMode === "facilitator" ? lesson.facilitatorCue : lesson.learnerCue;
+  const isLearnerView = currentMode === "learner";
+  const viewLabel = isLearnerView ? "Self-paced learner view" : "Presentation view";
+  const promptTitle = isLearnerView ? "Try this yourself" : "Audience prompt or action";
+  const presentationPoints = getPresentationPoints(lesson);
+  const readmeTitleId = `readme-title-${lesson.id}`;
+  const readmePanelId = `readme-panel-${lesson.id}`;
+  const shouldShowReadme = isLearnerView || openReadmeLessonId === lesson.id;
+  const cards = isLearnerView
+    ? [
+        { title: "Goal", text: lesson.mainMessage, feature: true },
+        { title: "Self-paced guide", text: lesson.learnerCue },
+        { title: "Hands-on exercise", text: lesson.demo },
+        { title: "Completion check", text: `Before continuing, make sure you can explain this takeaway: ${lesson.takeaway}` }
+      ]
+    : [
+        { title: "Audience headline", text: lesson.mainMessage, feature: true },
+        { title: "Section purpose", text: lesson.summary },
+        { title: "Key points from README", items: presentationPoints },
+        { title: "Live demo", text: lesson.demo },
+        { title: "Audience takeaway", text: lesson.takeaway }
+      ];
+  const readmeSection = `
+      <section class="readme-card" id="${escapeAttribute(readmePanelId)}" aria-labelledby="${escapeAttribute(readmeTitleId)}" data-readme-section ${shouldShowReadme ? "" : "hidden"}>
+        <div class="prompt-header">
+          <h3 id="${escapeAttribute(readmeTitleId)}">${isLearnerView ? "Full lesson detail" : "README detail"}</h3>
+          ${isLearnerView
+            ? `<a class="source-link" href="${escapeAttribute(lesson.source)}" target="_blank" rel="noreferrer">Open source file</a>`
+            : `<span class="source-path">${escapeHtml(normalizeSourceLabel(lesson.source))}</span>`}
+        </div>
+        <div class="markdown-body" data-readme-content>
+          <p>Loading README...</p>
+        </div>
+      </section>
+    `;
 
   lessonStage.innerHTML = `
-    <article class="lesson-view">
+    <article class="lesson-view ${isLearnerView ? "learner-view" : "presentation-view"}">
       <header class="lesson-hero">
         <div>
           <div class="lesson-kicker">
             <span class="pill hot">${escapeHtml(lesson.id)}</span>
+            <span class="pill">${escapeHtml(viewLabel)}</span>
             <span class="pill">${escapeHtml(lesson.phase)}</span>
             <span class="pill">${escapeHtml(lesson.time)}</span>
             ${lesson.time.includes("optional") ? '<span class="pill">Optional</span>' : ""}
@@ -437,30 +582,23 @@ function renderLesson() {
           <h2 class="lesson-title">${escapeHtml(lesson.title)}</h2>
           <p class="lesson-summary">${escapeHtml(lesson.summary)}</p>
         </div>
+        ${isLearnerView
+          ? `<a class="source-link lesson-source-link" href="#${escapeAttribute(readmePanelId)}">README below</a>`
+          : `<button class="source-link lesson-source-link" type="button" data-readme-toggle aria-expanded="${shouldShowReadme ? "true" : "false"}" aria-controls="${escapeAttribute(readmePanelId)}">${shouldShowReadme ? "Hide README" : "Open README"}</button>`}
       </header>
 
       <section class="card-grid" aria-label="Lesson guidance cards">
-        <article class="card feature">
-          <h3>Main message</h3>
-          <p>${escapeHtml(lesson.mainMessage)}</p>
-        </article>
-        <article class="card">
-          <h3>${escapeHtml(modeTitle)}</h3>
-          <p>${escapeHtml(modeText)}</p>
-        </article>
-        <article class="card">
-          <h3>Suggested demo</h3>
-          <p>${escapeHtml(lesson.demo)}</p>
-        </article>
-        <article class="card">
-          <h3>Takeaway</h3>
-          <p>${escapeHtml(lesson.takeaway)}</p>
-        </article>
+        ${cards.map((card) => `
+          <article class="card ${card.feature ? "feature" : ""}">
+            <h3>${escapeHtml(card.title)}</h3>
+            ${renderCardBody(card)}
+          </article>
+        `).join("")}
       </section>
 
       <section class="prompt-card" aria-labelledby="try-it-title">
         <div class="prompt-header">
-          <h3 id="try-it-title">Try it prompt or action</h3>
+          <h3 id="try-it-title">${escapeHtml(promptTitle)}</h3>
           <button class="copy-button" type="button" data-copy="${escapeAttribute(lesson.tryIt)}">Copy</button>
         </div>
         <pre class="prompt-text">${escapeHtml(lesson.tryIt)}</pre>
@@ -486,15 +624,7 @@ function renderLesson() {
         ${lesson.tags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}
       </div>
 
-      <section class="readme-card" aria-labelledby="readme-title">
-        <div class="prompt-header">
-          <h3 id="readme-title">README preview</h3>
-          <a class="source-link" href="${escapeAttribute(lesson.source)}" target="_blank" rel="noreferrer">Open source file</a>
-        </div>
-        <div class="markdown-body" data-readme-content>
-          <p>Loading README...</p>
-        </div>
-      </section>
+      ${readmeSection}
 
       <footer class="lesson-footer">
         <button class="complete-button ${complete ? "is-complete" : ""}" type="button" data-complete="${lesson.id}">
@@ -517,7 +647,61 @@ function renderLesson() {
     button.addEventListener("click", () => goToRelativeLesson(Number(button.dataset.nav)));
   });
 
+  const readmeToggle = lessonStage.querySelector("[data-readme-toggle]");
+  readmeToggle?.addEventListener("click", () => toggleInlineReadme(lesson));
+
+  if (shouldShowReadme) {
+    renderReadme(lesson);
+  }
+}
+
+function normalizeSourceLabel(source) {
+  return source.replace(/^\.\.\//, "").replace(/^\.\.\//, "");
+}
+
+function toggleInlineReadme(lesson) {
+  const section = lessonStage.querySelector("[data-readme-section]");
+  const toggle = lessonStage.querySelector("[data-readme-toggle]");
+
+  if (!section || !toggle) {
+    return;
+  }
+
+  const isOpen = toggle.getAttribute("aria-expanded") === "true";
+
+  if (isOpen) {
+    openReadmeLessonId = "";
+    section.hidden = true;
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.textContent = "Open README";
+    return;
+  }
+
+  openReadmeLessonId = lesson.id;
+  section.hidden = false;
+  toggle.setAttribute("aria-expanded", "true");
+  toggle.textContent = "Hide README";
   renderReadme(lesson);
+  section.scrollIntoView({
+    behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+    block: "start"
+  });
+}
+
+function getPresentationPoints(lesson) {
+  return presentationPointsByLesson[lesson.id] || [
+    lesson.summary,
+    lesson.bridge,
+    lesson.takeaway
+  ];
+}
+
+function renderCardBody(card) {
+  if (card.items) {
+    return `<ul>${card.items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`;
+  }
+
+  return `<p>${escapeHtml(card.text)}</p>`;
 }
 
 function renderWelcome() {
@@ -573,14 +757,51 @@ function renderWelcome() {
           <strong>Refine</strong>
         </span>
       </section>
+
+      ${welcomeContextSections.map(renderWelcomeContextSection).join("")}
     </article>
   `;
 
   lessonStage.querySelector("[data-start]").addEventListener("click", () => navigateToLesson("00"));
 }
 
+function renderWelcomeContextSection(section) {
+  return `
+    <details class="welcome-context-section">
+      <summary class="welcome-context-summary">
+        <span class="welcome-context-header">
+          <span class="welcome-context-title">${escapeHtml(section.title)}</span>
+          <span class="welcome-context-subtitle">${escapeHtml(section.subtitle)}</span>
+        </span>
+        <span class="context-toggle" aria-hidden="true">
+          Explore
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M4.22 6.22 8 10l3.78-3.78 1.06 1.06L8 12.12 3.16 7.28l1.06-1.06Z"/>
+          </svg>
+        </span>
+      </summary>
+      <div class="welcome-context-grid">
+        ${section.cards.map(renderWelcomeContextCard).join("")}
+      </div>
+    </details>
+  `;
+}
+
+function renderWelcomeContextCard(card, index) {
+  const number = card.number || String(index + 1).padStart(2, "0");
+
+  return `
+    <article class="welcome-context-card">
+      <span class="context-number">${escapeHtml(number)}</span>
+      <h3>${escapeHtml(card.title)}</h3>
+      <p>${escapeHtml(card.text)}</p>
+    </article>
+  `;
+}
+
 function navigateToWelcome() {
   currentLessonId = "";
+  openReadmeLessonId = "";
   window.location.hash = "#/welcome";
   renderNavigation();
   renderLesson();
@@ -591,6 +812,10 @@ function navigateToLesson(lessonId) {
   if (!lessons.some((lesson) => lesson.id === lessonId)) {
     console.warn(`Unknown lesson id: ${lessonId}`);
     return;
+  }
+
+  if (currentLessonId !== lessonId) {
+    openReadmeLessonId = "";
   }
 
   currentLessonId = lessonId;

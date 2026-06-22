@@ -39,7 +39,9 @@ Do not introduce Git workflow, pull request, CI/CD, deployment, analytics, packa
 - Keep hash navigation for welcome and lessons, for example `#/welcome` and `#/lesson/05`.
 - Keep previous/next lesson navigation and left/right keyboard navigation.
 - Keep local progress tracking with `localStorage`.
-- Keep facilitator/learner mode available from icon controls.
+- Keep facilitator/learner mode available from icon controls, with clearly different page structures.
+- Treat facilitator mode as **audience-facing presentation view**. Do not show internal facilitator notes or private guidance in this mode.
+- Treat learner mode as **self-paced workshop view**. Include enough guidance and README detail for attendees to work independently.
 - Keep GitHub and Microsoft logo badges visible in the persistent top bar.
 
 ## Visual design rules
@@ -56,6 +58,7 @@ Do not introduce Git workflow, pull request, CI/CD, deployment, analytics, packa
 - Keep top-bar controls icon-only with accessible `aria-label` and `title` attributes.
 - Keep the welcome page focused on the hands-on end-to-end GitHub Copilot journey.
 - Keep the pair-programming loop visible as compact icon chips: understand, plan, implement, verify, review, refine.
+- Keep the welcome page context panels that explain how agents change the unit of work and how the AI economy changes delivery; keep them collapsible and collapsed by default.
 - Do not add a top search bar unless the user explicitly asks to restore search.
 
 ## Content model
@@ -69,7 +72,7 @@ Each lesson entry in `app.js` should include:
 - `phase`
 - `summary`
 - `mainMessage`
-- `facilitatorCue`
+- `presentationPoints`
 - `learnerCue`
 - `demo`
 - `tryIt`
@@ -79,6 +82,10 @@ Each lesson entry in `app.js` should include:
 - `bridge`
 
 Use the numbered section READMEs and the root workshop flow as the content source. Keep SPA text presentation-friendly; link or render Markdown for full detail.
+
+Derive facilitator/presentation view from audience-safe fields such as `mainMessage`, `summary`, `presentationPoints`, `demo`, `tryIt`, `takeaway`, and `bridge`. Do not render private facilitator guidance in presentation view.
+
+Facilitator mode should include key README content that is useful to show to the audience, such as what a section covers, what it intentionally skips, prerequisites, or the main exercise path. It should also expose an `Open README` button that renders the selected section Markdown inline instead of opening a separate window.
 
 ## Implementation procedure
 
@@ -136,10 +143,12 @@ Stop the temporary server after validation.
 
 - The walkthrough still works with no install step.
 - The welcome page explains the workshop as a hands-on GitHub Copilot journey from start to finish.
+- The welcome page includes two compact four-card context sections, collapsed by default: agents changing the unit of work and the new AI economy.
 - GitHub and Microsoft logo badges remain visible after leaving the welcome page.
 - The top bar is not crowded and the logo badges are vertically centered.
 - The lesson list includes welcome plus every numbered section in order.
-- The selected lesson shows main message, mode-specific cue, demo, try-it prompt, takeaway, topic transfer, tags, and inline README preview.
+- The selected facilitator view shows audience headline, section purpose, key README points, live demo, audience prompt/action, takeaway, topic transfer, tags, and an Open README button that renders Markdown inline.
+- The selected learner view shows goal, self-paced guidance, hands-on exercise, completion check, topic transfer, tags, and inline README preview.
 - Prompt/action text remains copy-ready and beginner-friendly.
 - The design supports live presentation and self-paced attendance without becoming a production app.
 
