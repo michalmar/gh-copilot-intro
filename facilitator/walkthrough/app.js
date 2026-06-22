@@ -352,6 +352,8 @@ const welcomeContextSections = [
 
 const STORAGE_KEY = "copilot-workshop-walkthrough-progress";
 const MODE_KEY = "copilot-workshop-walkthrough-mode";
+const CONFETTI_COLORS = ["#2f81f7", "#3fb950", "#d29922", "#f85149", "#ff8aa1", "#a371f7"];
+const CONFETTI_COUNT = 72;
 
 const lessonList = document.querySelector("#lesson-list");
 const lessonStage = document.querySelector("#lesson-stage");
@@ -851,11 +853,14 @@ function goToRelativeLesson(direction) {
 }
 
 function toggleLessonComplete(lessonId) {
+  let markedComplete = false;
+
   if (completedLessons.has(lessonId)) {
     completedLessons.delete(lessonId);
     showToast("Marked incomplete");
   } else {
     completedLessons.add(lessonId);
+    markedComplete = true;
     showToast("Marked complete");
   }
 
@@ -863,6 +868,42 @@ function toggleLessonComplete(lessonId) {
   renderNavigation();
   renderLesson();
   updateProgress();
+
+  if (markedComplete) {
+    launchCompletionConfetti();
+  }
+}
+
+function launchCompletionConfetti() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return;
+  }
+
+  document.querySelector(".confetti-layer")?.remove();
+
+  const layer = document.createElement("div");
+  layer.className = "confetti-layer";
+  layer.setAttribute("aria-hidden", "true");
+
+  for (let index = 0; index < CONFETTI_COUNT; index += 1) {
+    const piece = document.createElement("span");
+    const shape = index % 6 === 0 ? "is-circle" : index % 4 === 0 ? "is-ribbon" : "is-rectangle";
+    const spinDirection = Math.random() > 0.5 ? 1 : -1;
+
+    piece.className = `confetti-piece ${shape}`;
+    piece.style.backgroundColor = CONFETTI_COLORS[index % CONFETTI_COLORS.length];
+    piece.style.setProperty("--x", `${10 + Math.random() * 80}vw`);
+    piece.style.setProperty("--delay", `${Math.random() * 140}ms`);
+    piece.style.setProperty("--fall-duration", `${1000 + Math.random() * 850}ms`);
+    piece.style.setProperty("--drift", `${(Math.random() - 0.5) * 34}vw`);
+    piece.style.setProperty("--start-rotation", `${Math.random() * 180}deg`);
+    piece.style.setProperty("--end-rotation", `${spinDirection * (360 + Math.random() * 540)}deg`);
+
+    layer.append(piece);
+  }
+
+  document.body.append(layer);
+  window.setTimeout(() => layer.remove(), 2400);
 }
 
 function updateProgress() {

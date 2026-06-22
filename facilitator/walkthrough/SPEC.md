@@ -57,6 +57,7 @@ The SPA contains:
   - **The new AI economy** with four cards: AI does not sleep, Cost / value, People + tokens, and Value is not the model.
 - In facilitator mode, keep README detail out of the projected lesson view by default, then render it inline when the facilitator chooses **Open README**.
 - In learner mode, render each lesson's source Markdown README inline, with a source-file link as a fallback.
+- When a user marks a lesson complete, show a short, flat-color confetti celebration that respects `prefers-reduced-motion`.
 - Work from a local static server without build tooling.
 
 ## Visual and interaction requirements

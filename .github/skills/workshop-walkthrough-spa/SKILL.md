@@ -39,6 +39,7 @@ Do not introduce Git workflow, pull request, CI/CD, deployment, analytics, packa
 - Keep hash navigation for welcome and lessons, for example `#/welcome` and `#/lesson/05`.
 - Keep previous/next lesson navigation and left/right keyboard navigation.
 - Keep local progress tracking with `localStorage`.
+- Celebrate newly completed lessons with a short dependency-free confetti burst that respects `prefers-reduced-motion`.
 - Keep facilitator/learner mode available from icon controls, with clearly different page structures.
 - Treat facilitator mode as **audience-facing presentation view**. Do not show internal facilitator notes or private guidance in this mode.
 - Treat learner mode as **self-paced workshop view**. Include enough guidance and README detail for attendees to work independently.
@@ -149,6 +150,7 @@ Stop the temporary server after validation.
 - The lesson list includes welcome plus every numbered section in order.
 - The selected facilitator view shows audience headline, section purpose, key README points, live demo, audience prompt/action, takeaway, topic transfer, tags, and an Open README button that renders Markdown inline.
 - The selected learner view shows goal, self-paced guidance, hands-on exercise, completion check, topic transfer, tags, and inline README preview.
+- Marking a lesson complete shows a tasteful local confetti burst, while marking it incomplete does not.
 - Prompt/action text remains copy-ready and beginner-friendly.
 - The design supports live presentation and self-paced attendance without becoming a production app.
 

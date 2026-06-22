@@ -967,6 +967,38 @@ input:focus-visible {
   animation: toastIn 180ms ease both;
 }
 
+.confetti-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.confetti-piece {
+  position: absolute;
+  top: -1.2rem;
+  left: var(--x);
+  width: 0.55rem;
+  height: 0.9rem;
+  opacity: 0;
+  border-radius: 2px;
+  transform: translate3d(0, -1rem, 0) rotate(var(--start-rotation));
+  animation: confettiFall var(--fall-duration) cubic-bezier(0.18, 0.78, 0.38, 1) var(--delay) forwards;
+}
+
+.confetti-piece.is-circle {
+  width: 0.58rem;
+  height: 0.58rem;
+  border-radius: 50%;
+}
+
+.confetti-piece.is-ribbon {
+  width: 0.34rem;
+  height: 1.25rem;
+  border-radius: 999px;
+}
+
 body.spotlight-mode .journey-panel {
   display: none;
 }
@@ -1001,6 +1033,22 @@ body.spotlight-mode .app-shell {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes confettiFall {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -1rem, 0) rotate(var(--start-rotation));
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(var(--drift), 105vh, 0) rotate(var(--end-rotation));
   }
 }
 
