@@ -98,7 +98,7 @@ Facilitator mode should include key README content that is useful to show to the
 6. Keep Markdown rendering local:
    - fetch README files by relative path from the local static server
    - escape HTML before rendering
-   - support common workshop Markdown: headings, paragraphs, lists, fenced code, inline code, emphasis, and links
+   - support common workshop Markdown: headings, paragraphs, lists, fenced code, inline code, emphasis, links, and pipe tables
 7. Preserve accessibility basics:
    - semantic landmarks
    - clear focus states

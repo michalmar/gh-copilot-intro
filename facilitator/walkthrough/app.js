@@ -977,7 +977,9 @@ function markdownToHtml(markdown, sourcePath) {
     listItems = [];
   };
 
-  lines.forEach((line) => {
+  for (let index = 0; index < lines.length; index += 1) {
+    const line = lines[index];
+
     if (line.startsWith("```")) {
       if (inCode) {
         html.push(`<pre><code>${escapeHtml(codeLines.join("\n"))}</code></pre>`);
@@ -988,12 +990,29 @@ function markdownToHtml(markdown, sourcePath) {
         flushList();
         inCode = true;
       }
-      return;
+      continue;
     }
 
     if (inCode) {
       codeLines.push(line);
-      return;
+      continue;
+    }
+
+    if (isMarkdownTableStart(lines, index)) {
+      flushParagraph();
+      flushList();
+
+      const tableLines = [line, lines[index + 1]];
+      index += 2;
+
+      while (index < lines.length && isMarkdownTableRow(lines[index])) {
+        tableLines.push(lines[index]);
+        index += 1;
+      }
+
+      index -= 1;
+      html.push(renderMarkdownTable(tableLines, sourcePath));
+      continue;
     }
 
     const heading = line.match(/^(#{1,6})\s+(.+)$/);
@@ -1002,24 +1021,24 @@ function markdownToHtml(markdown, sourcePath) {
       flushList();
       const level = Math.min(heading[1].length + 1, 6);
       html.push(`<h${level}>${formatInline(heading[2], sourcePath)}</h${level}>`);
-      return;
+      continue;
     }
 
     const bullet = line.match(/^\s*(?:[-*]|\d+\.)\s+(.+)$/);
     if (bullet) {
       flushParagraph();
       listItems.push(bullet[1]);
-      return;
+      continue;
     }
 
     if (!line.trim()) {
       flushParagraph();
       flushList();
-      return;
+      continue;
     }
 
     paragraph.push(line.trim());
-  });
+  }
 
   if (inCode) {
     html.push(`<pre><code>${escapeHtml(codeLines.join("\n"))}</code></pre>`);
@@ -1029,6 +1048,60 @@ function markdownToHtml(markdown, sourcePath) {
   flushList();
 
   return html.join("");
+}
+
+function isMarkdownTableStart(lines, index) {
+  const header = lines[index];
+  const divider = lines[index + 1];
+
+  if (!isMarkdownTableRow(header) || !isMarkdownTableDivider(divider)) {
+    return false;
+  }
+
+  return splitMarkdownTableRow(header).length === splitMarkdownTableRow(divider).length;
+}
+
+function isMarkdownTableRow(line = "") {
+  const trimmed = line.trim();
+
+  return trimmed.startsWith("|") && trimmed.endsWith("|") && splitMarkdownTableRow(trimmed).length > 1;
+}
+
+function isMarkdownTableDivider(line = "") {
+  const cells = splitMarkdownTableRow(line);
+
+  return cells.length > 1 && cells.every((cell) => /^:?-{3,}:?$/.test(cell.trim()));
+}
+
+function splitMarkdownTableRow(line) {
+  return line
+    .trim()
+    .replace(/^\|/, "")
+    .replace(/\|$/, "")
+    .split(/(?<!\\)\|/)
+    .map((cell) => cell.trim().replaceAll("\\|", "|"));
+}
+
+function renderMarkdownTable(tableLines, sourcePath) {
+  const headers = splitMarkdownTableRow(tableLines[0]);
+  const rows = tableLines.slice(2).map(splitMarkdownTableRow);
+
+  return `
+    <div class="markdown-table-wrap">
+      <table>
+        <thead>
+          <tr>${headers.map((header) => `<th>${formatInline(header, sourcePath)}</th>`).join("")}</tr>
+        </thead>
+        <tbody>
+          ${rows.map((row) => `
+            <tr>
+              ${headers.map((_, cellIndex) => `<td>${formatInline(row[cellIndex] || "", sourcePath)}</td>`).join("")}
+            </tr>
+          `).join("")}
+        </tbody>
+      </table>
+    </div>
+  `;
 }
 
 function formatInline(value, sourcePath) {

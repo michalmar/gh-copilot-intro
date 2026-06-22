@@ -926,6 +926,53 @@ input:focus-visible {
   border: 0;
 }
 
+.markdown-table-wrap {
+  max-width: 100%;
+  margin: 1rem 0 1.25rem;
+  overflow-x: auto;
+  border: 1px solid var(--border-muted);
+  border-radius: var(--radius-md);
+}
+
+.markdown-body table {
+  width: 100%;
+  min-width: 44rem;
+  border-collapse: collapse;
+  background: var(--panel-muted);
+}
+
+.markdown-body th,
+.markdown-body td {
+  padding: 0.72rem 0.85rem;
+  vertical-align: top;
+  border-right: 1px solid var(--border-muted);
+  border-bottom: 1px solid var(--border-muted);
+}
+
+.markdown-body th:last-child,
+.markdown-body td:last-child {
+  border-right: 0;
+}
+
+.markdown-body tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.markdown-body th {
+  color: var(--text);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: left;
+  text-transform: uppercase;
+  background: var(--panel);
+}
+
+.markdown-body td {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
 .lesson-footer {
   display: flex;
   flex-wrap: wrap;
