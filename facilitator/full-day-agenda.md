@@ -37,6 +37,7 @@ Keep the GitHub Copilot half practical and repository-led. Highlight the main ar
 - **Pair-programming loop:** understand, plan, implement, verify, review, and refine.
 - **Hands-on samples:** use the Node and Python samples as small, safe exercises attendees can run locally.
 - **Reusable workflows:** Spaces, skills, MCP, specs, and instructions as ways to make Copilot more repeatable for teams.
+- **Token optimization:** keep context scoped, output concise, and retries low without making prompts vague.
 
 Recommended demo arc:
 

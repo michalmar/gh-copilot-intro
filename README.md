@@ -1,6 +1,6 @@
 # GitHub Copilot workshop repository
 
-This repository is a **slide-free, presentation-style workshop** for a **5-6 hour customer session** on GitHub Copilot. It focuses on **what Copilot is, how to set it up, how to use it as a pair-programming partner on simple examples, and how to introduce advanced features** such as **Spaces, constitution/instructions, agents, skills, MCP, plugins, spec-driven development, Copilot CLI, and a short Azure deployment extension**.
+This repository is a **slide-free, presentation-style workshop** for a **5-6 hour customer session** on GitHub Copilot. It focuses on **what Copilot is, how to set it up, how to use it as a pair-programming partner on simple examples, and how to introduce advanced features** such as **Spaces, constitution/instructions, agents, skills, MCP, plugins, spec-driven development, Copilot CLI, token optimization, and a short Azure deployment extension**.
 
 The core workshop intentionally **does not cover Git workflows, pull requests, or CI/CD**. Deployment appears only as an explicit optional Azure extension after the app has been built.
 
@@ -11,6 +11,7 @@ The core workshop intentionally **does not cover Git workflows, pull requests, o
 3. **Pair-programming is a loop.** Use Copilot to understand, plan, implement, verify, review, and refine in small steps.
 4. **Keep humans in charge.** Use Copilot to accelerate thinking and implementation, then review, test, and refine.
 5. **Move from one-off prompts to repeatable workflows.** Spaces, constitutions, instructions, and specs make team usage more reliable.
+6. **Optimize for value, not raw token minimization.** Focused context, concise output, and fewer retries make Copilot more efficient and easier to review.
 
 ## 5-6 hour flow
 
@@ -30,6 +31,7 @@ The core workshop intentionally **does not cover Git workflows, pull requests, o
 | 20 min | Copilot CLI | [10-copilot-cli](./10-copilot-cli/README.md) |
 | 25 min | Hands-on: Python + CLI | [11-hands-on-python](./11-hands-on-python/README.md) |
 | 30-45 min optional | Deploy the vibe-coded app to Azure | [12-deploy-to-azure](./12-deploy-to-azure/README.md) |
+| 15-20 min optional | Token optimization and context budgeting | [13-token-optimization](./13-token-optimization/README.md) |
 
 ## Repository map
 
@@ -46,6 +48,7 @@ The core workshop intentionally **does not cover Git workflows, pull requests, o
 - [10-copilot-cli](./10-copilot-cli/README.md)
 - [11-hands-on-python](./11-hands-on-python/README.md)
 - [12-deploy-to-azure](./12-deploy-to-azure/README.md)
+- [13-token-optimization](./13-token-optimization/README.md)
 - [facilitator](./facilitator/README.md)
 - [reference](./reference/README.md)
 - [constitution](./constitution/README.md)

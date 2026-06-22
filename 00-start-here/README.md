@@ -16,6 +16,7 @@ Many teams know GitHub Copilot as “the autocomplete tool.” That is too narro
 - how to set it up
 - how to use it on simple coding tasks
 - how to get better answers through context and instructions
+- how to keep context focused and token usage efficient
 - how advanced features fit into a real development workflow
 
 ## What this workshop intentionally skips
@@ -47,4 +48,4 @@ Attendees should leave with three things:
 
 1. a clear mental model for what Copilot can help with,
 2. a practical pair-programming loop for prompting, steering, verifying, and refining,
-3. a sense of how to scale usage through shared context and specs.
+3. a sense of how to scale usage through shared context, specs, and focused context budgets.

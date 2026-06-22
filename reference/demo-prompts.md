@@ -167,6 +167,30 @@ Read @samples/python-ticket-analyzer/specs/needs-attention/README.md and impleme
 Review the recent changes in this folder and suggest the two most likely bugs or edge cases.
 ```
 
+## Token optimization
+
+```text
+Find the smallest file set needed to answer this task.
+Return only file paths and one reason each. Do not summarize the whole repository.
+```
+
+```text
+Using only the selected files, answer in this format: changed files, reason, validation, risks.
+Max 5 bullets. No intro.
+```
+
+```text
+Review my prompt for token efficiency and correctness.
+Tell me what context is missing, what can be removed, and what output limit I should add.
+Max 5 bullets.
+```
+
+```text
+Here is the relevant error excerpt, not the full log:
+<paste command, exit code, key stack trace, and last 30 lines>
+Find the likely cause and suggest the smallest fix.
+```
+
 ## Bad answer recovery
 
 ```text

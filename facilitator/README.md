@@ -31,7 +31,7 @@ For a full-day delivery that combines this GitHub Copilot workshop with Azure AI
 | 00-04 | Keep these interactive and conversational. Ask the room what they already use Copilot for. |
 | 05 | Spend the most time here. This is where attendees get a quick success. |
 | 06-09 | Treat these as “how to scale Copilot from personal use to team use.” |
-| 10-12 | Demo first. If setup is slow, keep CLI hands-on and Azure deployment optional. |
+| 10-13 | Demo first. If setup is slow, keep CLI hands-on, make Azure deployment optional, and use token optimization as a short debrief. |
 
 ## Golden path: Node sample
 
@@ -88,6 +88,7 @@ Trim in this order:
 1. Reduce attendee hands-on time in the Python sample.
 2. Keep Spaces as a short demo instead of a full exercise.
 3. Keep CLI to plan mode, `@file`, and one implementation prompt.
+4. Keep token optimization to one prompt makeover and one output-limit example.
 
 Do **not** cut setup verification or the “effective usage” section. Those are what make the rest of the workshop land.
 
