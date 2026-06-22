@@ -9,6 +9,8 @@ Use this repository as a **narrated walkthrough** rather than as reading materia
 
 For a full-day delivery that combines this GitHub Copilot workshop with Azure AI Foundry content, use the [full-day agenda](./full-day-agenda.md).
 
+For a local presentation-style guide through the numbered sections, run the [walkthrough SPA](./walkthrough/README.md).
+
 ## Before the session
 
 ### Required
