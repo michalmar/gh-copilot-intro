@@ -33,7 +33,7 @@ For a local presentation-style guide through the numbered sections, run the [wal
 | 00-04 | Keep these interactive and conversational. Ask the room what they already use Copilot for. |
 | 05 | Spend the most time here. This is where attendees get a quick success. |
 | 06-09 | Treat these as “how to scale Copilot from personal use to team use.” |
-| 10-13 | Demo first. If setup is slow, keep CLI hands-on, make Azure deployment optional, and use token optimization as a short debrief. |
+| 10-14 | Demo first. If setup is slow, keep CLI hands-on, make Azure deployment and SDK optional, and use token optimization as a short debrief. |
 
 ## Golden path: Node sample
 
@@ -91,6 +91,7 @@ Trim in this order:
 2. Keep Spaces as a short demo instead of a full exercise.
 3. Keep CLI to plan mode, `@file`, and one implementation prompt.
 4. Keep token optimization to one prompt makeover and one output-limit example.
+5. Keep the Copilot SDK to a code walkthrough if local SDK authentication is not ready.
 
 Do **not** cut setup verification or the “effective usage” section. Those are what make the rest of the workshop land.
 

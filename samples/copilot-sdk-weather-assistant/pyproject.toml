@@ -1,0 +1,10 @@
+[project]
+name = "copilot-sdk-weather-assistant"
+version = "0.1.0"
+description = "Small Python demo for the GitHub Copilot SDK workshop section."
+requires-python = ">=3.11"
+dependencies = [
+    "github-copilot-sdk",
+    "pydantic",
+]
+

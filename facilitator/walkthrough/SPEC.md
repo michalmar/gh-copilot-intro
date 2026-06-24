@@ -13,7 +13,7 @@ The SPA should not replace the Markdown source files. It should make the worksho
 
 ## Design principles
 
-- Preserve the repository's numbered lesson flow from `00-start-here` through `13-token-optimization`.
+- Preserve the repository's numbered lesson flow from `00-start-here` through `14-github-copilot-sdk`.
 - Make the pair-programming loop visible: understand, plan, implement, verify, review, refine.
 - Use a clean GitHub-style product workspace aesthetic: dark surfaces, hairline borders, precise spacing, and task-app navigation.
 - Use the GitHub/Primer system font stack used by GitHub Pages-style documentation.
@@ -114,7 +114,7 @@ Opening `index.html` directly may work in some browsers, but the supported path 
 - `facilitator/walkthrough/app.js` contains the lesson data and SPA behavior.
 - Facilitator mode is audience-facing, shows key README points, exposes an Open README button that renders Markdown inline, and does not show internal facilitator guidance.
 - Learner mode is self-paced and renders the related Markdown README inline.
-- The app exposes every numbered lesson from `00` to `13`.
+- The app exposes every numbered lesson from `00` to `14`.
 - Hash links, previous/next buttons, and keyboard arrows move between lessons.
 - Completion state survives a page refresh.
 - The app has no build step and no external runtime dependency beyond a local static server.

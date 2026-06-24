@@ -1,6 +1,6 @@
 # GitHub Copilot workshop repository
 
-This repository is a **slide-free, presentation-style workshop** for a **5-6 hour customer session** on GitHub Copilot. It focuses on **what Copilot is, how to set it up, how to use it as a pair-programming partner on simple examples, and how to introduce advanced features** such as **Spaces, constitution/instructions, agents, skills, MCP, plugins, spec-driven development, Copilot CLI, token optimization, and a short Azure deployment extension**.
+This repository is a **slide-free, presentation-style workshop** for a **5-6 hour customer session** on GitHub Copilot. It focuses on **what Copilot is, how to set it up, how to use it as a pair-programming partner on simple examples, and how to introduce advanced features** such as **Spaces, constitution/instructions, agents, skills, MCP, plugins, spec-driven development, Copilot CLI, token optimization, the Copilot SDK, and a short Azure deployment extension**.
 
 The core workshop intentionally **does not cover Git workflows, pull requests, or CI/CD**. Deployment appears only as an explicit optional Azure extension after the app has been built.
 
@@ -32,6 +32,7 @@ The core workshop intentionally **does not cover Git workflows, pull requests, o
 | 25 min | Hands-on: Python + CLI | [11-hands-on-python](./11-hands-on-python/README.md) |
 | 30-45 min optional | Deploy the vibe-coded app to Azure | [12-deploy-to-azure](./12-deploy-to-azure/README.md) |
 | 15-20 min optional | Token optimization and context budgeting | [13-token-optimization](./13-token-optimization/README.md) |
+| 20-25 min optional | Building Copilot-powered apps with the SDK | [14-github-copilot-sdk](./14-github-copilot-sdk/README.md) |
 
 ## Repository map
 
@@ -49,6 +50,7 @@ The core workshop intentionally **does not cover Git workflows, pull requests, o
 - [11-hands-on-python](./11-hands-on-python/README.md)
 - [12-deploy-to-azure](./12-deploy-to-azure/README.md)
 - [13-token-optimization](./13-token-optimization/README.md)
+- [14-github-copilot-sdk](./14-github-copilot-sdk/README.md)
 - [facilitator](./facilitator/README.md)
 - [reference](./reference/README.md)
 - [constitution](./constitution/README.md)
@@ -59,6 +61,7 @@ The core workshop intentionally **does not cover Git workflows, pull requests, o
 
 - [`samples/node-feedback-api`](./samples/node-feedback-api/README.md): editor-first exercise using Node.js, Express, and Vitest
 - [`samples/python-ticket-analyzer`](./samples/python-ticket-analyzer/README.md): `uv`-managed Python CLI sample for spec-driven development and Copilot CLI exercises
+- [`samples/copilot-sdk-weather-assistant`](./samples/copilot-sdk-weather-assistant/README.md): Python Copilot SDK sample with streaming responses and a typed local tool
 - [`samples/hospital-performance-summary-v1`](./samples/hospital-performance-summary-v1/): data-only hospital performance exercise for showing what Copilot must invent without a spec
 - [`samples/hospital-performance-summary-v2`](./samples/hospital-performance-summary-v2/README.md): guided hospital performance exercise using a spec, local instructions, skills, and fictional demo data
 

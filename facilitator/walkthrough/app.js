@@ -189,7 +189,7 @@ const lessons = [
     takeaway: "This is the advanced but still practical pattern: reusable guidance plus clear spec plus terminal workflow.",
     tags: ["python", "typer", "uv", "cli"],
     source: "../../11-hands-on-python/README.md",
-    bridge: "The core workshop can end here, or continue into the optional Azure deployment loop."
+    bridge: "The core workshop can end here, or continue into optional extensions: Azure deployment, token budgeting, and the Copilot SDK."
   },
   {
     id: "12",
@@ -221,14 +221,30 @@ const lessons = [
     takeaway: "Treat tokens as an investment. The best Copilot interactions are scoped, structured, verified, and short enough to keep the human in control.",
     tags: ["tokens", "context", "efficiency"],
     source: "../../13-token-optimization/README.md",
-    bridge: "End by connecting efficiency back to the whole workshop loop: focused context, fast verification, human judgment."
+    bridge: "After optimizing Copilot interactions, show how teams can embed Copilot into their own tools."
+  },
+  {
+    id: "14",
+    slug: "14-github-copilot-sdk",
+    title: "GitHub Copilot SDK",
+    time: "20-25 min optional",
+    phase: "Optional extension",
+    summary: "Show how to build a small Copilot-powered Python assistant with a streaming session and a typed local tool.",
+    mainMessage: "The GitHub Copilot SDK lets you build Copilot-powered experiences inside your own app, script, or internal developer tool.",
+    learnerCue: "Focus on the boundary between Copilot-generated text and app-owned Python tool code.",
+    demo: "Run the weather assistant sample, ask about Seattle and Tokyo, then show how the get_weather tool supplies deterministic local data.",
+    tryIt: "In samples/copilot-sdk-weather-assistant/weather_assistant.py, add a deterministic weather result for Prague. Keep the sample beginner-friendly and do not call any external APIs.",
+    takeaway: "The SDK bridges from using Copilot while coding to building a Copilot-powered tool: clear prompts, typed tools, explicit permissions, and reviewable behavior.",
+    tags: ["sdk", "python", "tools", "streaming"],
+    source: "../../14-github-copilot-sdk/README.md",
+    bridge: "Close by connecting the whole workshop loop to app design: context, capability, verification, and human control."
   }
 ];
 
 const presentationPointsByLesson = {
   "00": [
-    "Covers: what Copilot is, setup, simple coding tasks, context and instructions, focused context, and advanced workflow features.",
-    "Intentionally skips: Git basics, pull requests, CI/CD, and deployment except for the optional Azure extension.",
+    "Covers: what Copilot is, setup, simple coding tasks, context and instructions, focused context, advanced workflow features, and optional SDK exploration.",
+    "Intentionally skips: Git basics, pull requests, CI/CD, and deployment except for optional extension sections.",
     "Use the repository as a sequence of mini slide decks: main message, short explanation, demo, try-it prompt, and takeaway.",
     "Success means attendees leave with a Copilot mental model, a pair-programming loop, and a path for shared context and specs."
   ],
@@ -298,6 +314,12 @@ const presentationPointsByLesson = {
     "Token optimization is focused context, not vague prompt shortening.",
     "Clear scope and constraints often save more time than terse wording.",
     "Treat tokens as an investment in correctness and reviewability."
+  ],
+  "14": [
+    "The SDK is for building Copilot-powered application experiences, not replacing normal Copilot usage.",
+    "The sample shows client startup, session creation, streaming events, and a typed local tool.",
+    "The app owns tool implementation, data access, and permissions.",
+    "Keep the demo deterministic so attendees can focus on the SDK flow."
   ]
 };
 
@@ -354,7 +376,7 @@ const welcomeContextSections = [
 
 const STORAGE_KEY = "copilot-workshop-walkthrough-progress";
 const MODE_KEY = "copilot-workshop-walkthrough-mode";
-const README_VERSION = "20260622-lesson-08-readme-refresh";
+const README_VERSION = "20260622-section-14";
 const CONFETTI_COLORS = ["#2f81f7", "#3fb950", "#d29922", "#f85149", "#ff8aa1", "#a371f7"];
 const CONFETTI_COUNT = 72;
 
@@ -718,7 +740,7 @@ function renderWelcome() {
         <p>
           Move section by section through a practical GitHub Copilot journey: setup, first editor wins,
           effective prompting, hands-on Node and Python exercises, reusable context, specs, agents, CLI,
-          and optional Azure deployment. Each step gives you a demo, a prompt to try, and a review habit
+          and optional Azure deployment and SDK examples. Each step gives you a demo, a prompt to try, and a review habit
           that keeps the developer in control.
         </p>
         <button class="primary-button" type="button" data-start>Start with section 00</button>

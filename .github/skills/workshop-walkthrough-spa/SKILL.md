@@ -34,7 +34,7 @@ Do not introduce Git workflow, pull request, CI/CD, deployment, analytics, packa
   python3 -m http.server 4173
   ```
 
-- Preserve the numbered workshop flow from `00-start-here` through `13-token-optimization`.
+- Preserve the numbered workshop flow from `00-start-here` through `14-github-copilot-sdk`.
 - Keep lesson content concise in the SPA and render the related Markdown README inline for full detail.
 - Keep hash navigation for welcome and lessons, for example `#/welcome` and `#/lesson/05`.
 - Keep previous/next lesson navigation and left/right keyboard navigation.
